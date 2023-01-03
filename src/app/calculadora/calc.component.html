@@ -1,0 +1,34 @@
+<div class="calculadora">
+
+  <input type="text" class="tela" [value]="numero_corrente" disabled />
+  
+  <div class="botoes">
+    
+    <button type="button" (click) = "getOperacao('+')" class="operador" value="+">+</button>
+    <button type="button" (click) = "getOperacao('-')" class="operador" value="-">-</button>
+    <button type="button" (click) = "getOperacao('*')" class="operador" value="*">&times;</button>
+    <button type="button" (click) = "getOperacao('/')" class="operador" value="/">&divide;</button>
+
+    <button type="button" (click) = "getNumero('7')" value="7">7</button>
+    <button type="button" (click) = "getNumero('8')" value="8">8</button>
+    <button type="button" (click) = "getNumero('9')" value="9">9</button>
+
+
+    <button type="button" (click) = "getNumero('4')" value="4">4</button>
+    <button type="button" (click) = "getNumero('5')" value="5">5</button>
+    <button type="button" (click) = "getNumero('6')" value="6">6</button>
+
+
+    <button type="button" (click) = "getNumero('1')" value="1">1</button>
+    <button type="button" (click) = "getNumero('2')" value="2">2</button>
+    <button type="button" (click) = "getNumero('3')" value="3">3</button>
+
+
+    <button type="button" (click) = "getNumero('0')" value="0">0</button>
+    <button type="button" (click) = "getDecimal()" class="decimal" value=".">.</button>
+    <button type="button" (click) = "clear()"  class="all-clear" value="all-clear">AC</button>
+
+    <button type="button" (click) = "getOperacao('=')" class="sinal_igual" value="=">=</button>
+
+  </div>
+</div>
