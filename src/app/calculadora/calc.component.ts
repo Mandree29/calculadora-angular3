@@ -19,13 +19,14 @@ export class CalcComponent implements OnInit {
 
   public getNumero(v: string){
     console.log(v);
-    if(this.espera_segundo)
-    {
+    if(this.espera_segundo)//se o espera_segundo numero estiver positivo, significa que o primeiro operando já foi atribuído, 
+    {//nesse caso o numéro irá se atribuído para o segundo operando
       this.numero_corrente = v;
-      this.espera_segundo = false;
+      this.espera_segundo = false;// troca a variável para false caso o usuário apertar em mais de um botão cai no caso abaixo
     }else{
       this.numero_corrente === '0'? this.numero_corrente = v: this.numero_corrente += v;
-
+      // caso o numero corrente for == 0, isto é, caso em que não foi apertado nenhum numero na calculador, a calculador irá receber o valor digitado
+      // o segundo caso do operador unário é, caso já tenha um valor no numero corrente antes que não seja 0 o numero irá ser acrescentado
     }
   }
 
